@@ -1,0 +1,192 @@
+/* login.css */
+
+/* Container Styles */
+.container {
+    max-width: 400px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+table input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Message Styling */
+.message p {
+    color: green;
+    text-align: center;
+}
+
+/* Signup Link Styling */
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    table input {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+/* login.css */
+
+/* Container Styles */
+.signup-container {
+    max-width: 500px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+    width: 100%;
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+table input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Error Message Styling */
+.error-messages {
+    color: red;
+    padding-top: 10px;
+}
+
+.error-messages ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.error-messages li {
+    margin-bottom: 5px;
+}
+
+/* Login Link Styling */
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 15px;
+    }
+
+    table input {
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Contact Us</h1>
+
+    {% if messages %}
+        <table class="message-table">
+            <thead>
+                <tr>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in messages %}
+                <tr>
+                    <td style="color: green;">{{ message }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+
+    <h2>Send Us a Message</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+    </form>
+</div>
+{% endblock %}

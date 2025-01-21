@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+
+
+{% block content %}
+<h2>{% if object %}Edit{% else %}Create{% endif %} Laundry Booking</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% if object %}Update{% else %}Create{% endif %} Booking</button>
+</form>
+{% endblock %}

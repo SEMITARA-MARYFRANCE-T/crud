@@ -1,0 +1,33 @@
+
+{% extends 'app/base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <p>Good day, {{ user.name }}!</p>
+{% else %}
+    <p>You are not logged in. Please <a href="{% url 'login' %}">login</a> to continue.</p>
+{% endif %}
+
+<h2>Laundry Bookings</h2>
+<a href="{% url 'laundrybooking_create' %}">Create New Booking</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.description }}</td>
+                <td>{{ booking.status }}</td>
+                <td>
+                    <a href="{% url 'laundrybooking_detail' booking.pk %}">View</a> | 
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

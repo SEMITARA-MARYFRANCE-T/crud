@@ -1,0 +1,17 @@
+{% extends 'registration/admin_dashboard.html' %}
+
+{% block content %}
+    <h2>Update Booking Status</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p><strong>Booking Description:</strong> {{ booking.description }}</p>
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+            <option value="Pending" {% if booking.status == "Pending" %}selected{% endif %}>Pending</option>
+            <option value="Processing" {% if booking.status == "Processing" %}selected{% endif %}>Processing</option>
+            <option value="Completed" {% if booking.status == "Completed" %}selected{% endif %}>Completed</option>
+        </select>
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'admin_dashboard' %}">Back to Dashboard</a>
+{% endblock %}

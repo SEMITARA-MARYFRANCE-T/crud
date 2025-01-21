@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <p>Good day, {{ user.name|default:"User" }}!</p>
+{% else %}
+    <p>You are not logged in. Please <a href="{% url 'login' %}">login</a> to continue.</p>
+{% endif %}
+
+<div class="about-page" style="background-image: url('{% static 'images/ABOUT.png' %}');">
+    <!-- Additional content for the about page can be placed here -->
+</div>
+
+{% endblock content %}

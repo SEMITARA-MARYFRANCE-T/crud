@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+
+
+
+{% block content %}
+<h2>{{ booking.description }}</h2>
+<table>
+    <tr>
+        <th>Status:</th>
+        <td>{{ booking.status }}</td>
+    </tr>
+    <tr>
+        <th>Note:</th>
+        <td>{{ booking.note }}</td>
+    </tr>
+    <tr>
+        <th>Weight:</th>
+        <td>{{ booking.weight_kg }} kg</td>
+    </tr>
+    <tr>
+        <th>Date:</th>
+        <td>{{ booking.date }}</td>
+    </tr>
+</table>
+<a href="{% url 'laundrybooking_delete' booking.pk %}">Delete</a>
+{% endblock %}

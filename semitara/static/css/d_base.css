@@ -1,0 +1,122 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background:#253d5e;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            background-image: url('/static/images/HOME.jpg'); /* Ensure the path is correct */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        .hero .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            background:     green;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .section {     
+            padding: 50px 20px;
+            text-align: center;
+        
+        }
+    
+        
+        #about {
+            background-color: whitesmoke;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: black;
+        
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: #253d5e;
+        }
+        #services{
+            background-color: #253d5e;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .service {
+            flex: 1 1 30%;
+            margin: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        #contact{
+            background-color: #253d5e;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #253d5e;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f9;
+        color: #333;
+    }
+
+   

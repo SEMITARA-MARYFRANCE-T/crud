@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Admin Dashboard</h1>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Laundry Bookings Section -->
+        <section>
+            <h2>Laundry Bookings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Description</th>
+                        <th>Weight</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in bookingall %}
+                        <tr>
+                            <td>{{ booking.user.username }}</td>
+                            <td>{{ booking.description }}</td>
+                            <td>{{ booking.weight_kg }} kg</td>
+                            <td>{{ booking.get_status_display }}</td>
+                            <td>
+                                
+                                <a href="{% url 'laundrybooking_update' booking.id %}">Update</a>
+                                <a href="{% url 'laundrybooking_delete' booking.id %}">Delete</a>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5">No bookings found.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+        
+
+        <!-- Contact Messages Section -->
+        <section>
+            <h2>Contact Messages</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for message in messages %}
+                        <tr>
+                            <td>{{ message.name }}</td>
+                            <td>{{ message.email }}</td>
+                            <td>{{ message.message }}</td>
+                            <td>{{ message.created_at|date:"Y-m-d H:i" }}</td>
+                            <td>
+                                {% if not message.replied %}
+                                    <a href="javascript:void(0);" class="btn-reply" onclick="showReplyForm({{ message.id }})">
+                                        Reply
+                                    </a>
+                                {% else %}
+                                    <span class="text-success">Replied</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5">No messages found.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

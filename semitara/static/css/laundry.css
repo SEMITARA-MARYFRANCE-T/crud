@@ -1,0 +1,165 @@
+/* laundry.css */
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+/* Table Hover Effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form input,
+form select,
+form button {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Link Styles */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Centering text */
+.text-center {
+    text-align: center;
+}
+
+/* laundry.css */
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center content horizontally */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Table Styles for Messages */
+.message-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.message-table th, .message-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.message-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.message-table td {
+    background-color: #fafafa;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Button Styling */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 1.2rem;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .submit-button {
+        font-size: 1rem;
+    }
+}

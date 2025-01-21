@@ -1,0 +1,23 @@
+/* about.css */
+.about-page {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+}
+
+.about-page h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.about-page p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+}

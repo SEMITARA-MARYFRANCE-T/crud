@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Your Site</title>
+
+
+    <link rel="stylesheet" href="{% static 'css/d_base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/laundry.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+    {% include 'app/navbar.html' %}
+
+        {% block content %}
+        <!-- The content of the specific page will go here -->
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

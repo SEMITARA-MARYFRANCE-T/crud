@@ -1,0 +1,20 @@
+{% extends 'registration/admin_dashboard.html' %}
+
+{% block content %}
+<h2>All Laundry Bookings</h2>
+
+{% if bookings %}
+    <ul>
+        {% for booking in bookings %}
+            <li>
+                <a href="{% url 'laundrybooking_detail' booking.id %}">
+                    Booking #{{ booking.id }} - {{ booking.user.username }} - {{ booking.status }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No bookings found.</p>
+{% endif %}
+
+{% endblock %}
