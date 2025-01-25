@@ -72,14 +72,21 @@
                             <td>{{ message.email }}</td>
                             <td>{{ message.message }}</td>
                             <td>{{ message.created_at|date:"Y-m-d H:i" }}</td>
+                            
+                            
                             <td>
                                 {% if not message.replied %}
                                     <a href="javascript:void(0);" class="btn-reply" onclick="showReplyForm({{ message.id }})">
                                         Reply
                                     </a>
+                                    <form action="{% url 'contact-delete' message.id %}" method="POST" style="display:inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
                                 {% else %}
                                     <span class="text-success">Replied</span>
                                 {% endif %}
+                                
                             </td>
                         </tr>
                     {% empty %}

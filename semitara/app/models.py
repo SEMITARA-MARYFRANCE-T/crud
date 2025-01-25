@@ -32,12 +32,13 @@ class LaundryBooking(models.Model):
     class Meta:
         verbose_name = 'Laundry Booking'
         verbose_name_plural = 'Laundry Bookings'
+        
 class Contact(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     replied = models.BooleanField(default=False)
-
+    
     def __str__(self):
         return f"{self.name} - {self.email}"

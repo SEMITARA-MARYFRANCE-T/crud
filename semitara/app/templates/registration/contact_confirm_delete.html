@@ -1,0 +1,10 @@
+{% extends "registration/admin_dashboard.html" %}
+
+{% block content %}
+  <h2>Are you sure you want to delete "{{ object }}"?</h2>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+    <a href="{% url 'contact' %}">Cancel</a> <!-- Adjust 'contact-list' if needed -->
+  </form>
+{% endblock %}

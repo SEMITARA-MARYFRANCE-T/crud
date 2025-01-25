@@ -71,7 +71,7 @@ class LaundryBookingUpdateView(UpdateView):
 class LaundryBookingDeleteView(DeleteView):
     model = LaundryBooking
     template_name = 'laundry/laundrybooking_confirm_delete.html'
-    success_url = reverse_lazy('laundrybooking_list')  # Redirect to booking list after deletion
+    success_url = reverse_lazy('laundrybooking_list_all')  # Redirect to booking list after deletion
 
 # Show details of a specific laundry booking (Read)
 class LaundryBookingDetailView(DetailView):
@@ -102,6 +102,22 @@ def contact_view(request):
         form = ContactForm()
 
     return render(request, 'registration/contact.html', {'form': form})
+from django.shortcuts import get_object_or_404, redirect
+from django.contrib import messages
+from .models import Contact
+from .forms import ContactForm
+
+def contact_delete_view(request, pk):
+    contact = get_object_or_404(Contact, pk=pk)
+
+
+    # If method is POST, delete the object
+    if request.method == 'POST':
+        contact.delete()
+        messages.success(request, 'Contact deleted successfully.')
+        return redirect('admin_dashboard')  # Redirect to contact list or appropriate page
+
+    return render(request, 'registration/contact_confirm_delete.html', {'contact': contact})
 
 from django.shortcuts import render
 from .models import LaundryBooking
@@ -136,5 +152,6 @@ def send_reply(request, message_id):
         except Contact.DoesNotExist:
             messages.error(request, "Message not found.")
     return redirect('admin_dashboard')
+
 
 

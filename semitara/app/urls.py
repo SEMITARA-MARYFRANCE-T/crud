@@ -6,6 +6,7 @@ from .views import LaundryBookingListView, LaundryBookingCreateView, LaundryBook
 from .views import contact_view
 from . import views
 from .views import custom_logout
+from .views import contact_delete_view
 
 urlpatterns = [
     path('',HomePageView.as_view(),name='home'),
@@ -20,6 +21,8 @@ urlpatterns = [
     path('<int:pk>/update/', LaundryBookingUpdateView.as_view(), name='laundrybooking_update'),
     path('<int:pk>/delete/', LaundryBookingDeleteView.as_view(), name='laundrybooking_delete'),
     path('<int:pk>/', LaundryBookingDetailView.as_view(), name='laundrybooking_detail'),
-    path('contact/', contact_view, name='contact'),
+        path('contact/', contact_view, name='contact'),
+        path('contact/delete/<int:pk>/', contact_delete_view, name='contact-delete'),
+        
 ]
 
